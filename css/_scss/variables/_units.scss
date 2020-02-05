@@ -1,0 +1,16 @@
+:root {
+    /**
+     * Base units
+     */
+    --unit-step: .25;
+    --unit-base: 2rem; /* 32 px - don't calc() here - derived units not working in Edge */
+    --unit-up-4: calc(var(--unit-base) * (1 + 4 * var(--unit-step)));       /* 64px */
+    --unit-up-3: calc(var(--unit-base) * (1 + 3 * var(--unit-step)));       /* 56px */
+    --unit-up-2: calc(var(--unit-base) * (1 + 2 * var(--unit-step)));       /* 48px */
+    --unit-up-1: calc(var(--unit-base) * (1 + 1 * var(--unit-step)));       /* 40px */
+    /* base unit                                                               32px */
+    --unit-down-1: calc(var(--unit-base) * (1 - 1 * var(--unit-step)));     /* 24px */
+    --unit-down-2: calc(var(--unit-base) * (1 - 2 * var(--unit-step)));     /* 16px */
+    --unit-down-3: calc(var(--unit-base) * (1 - 3 * var(--unit-step)));     /*  8px */
+    --unit-down-3-5: calc(var(--unit-base) * (1 - 3.5 * var(--unit-step))); /*  4px */
+}

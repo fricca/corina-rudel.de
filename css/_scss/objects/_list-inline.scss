@@ -1,0 +1,62 @@
+/**
+* Inline list
+*
+* As the marker size uses em: set font-size on parent element, not on items
+*/
+.list-inline {
+    --inline-list-marker-space: 0;
+    --item-distance: var(--unit-down-1);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--centered {
+        justify-content: center;
+        padding-left: var(--item-distance);
+        padding-right: var(--inline-list-marker-space);
+    }
+
+    &__item {
+        /* Reduced line-height for items with line break inside */
+        --line-height: var(--line-height-reduced);
+        line-height: var(--line-height);
+        /* Provide the same spacing as the base line-height would have */
+        --line-height-adjust: calc((var(--line-height-base) - var(--line-height-reduced)) * 1em / 2);
+        padding: var(--line-height-adjust) var(--item-distance) var(--line-height-adjust) 0;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* With marker on right and left */
+    &--marker {
+        --inline-list-marker-space: 1em;
+        --item-distance: 0;
+    }
+    &__item--marker {
+        padding-right: 0;
+        padding-left: var(--inline-list-marker-space);
+        position: relative; /* Containing block */
+
+        &::before,
+        &::after {
+            --marker-size: 4px;
+            --marker-pos-h: calc(var(--inline-list-marker-space) / 2 - var(--marker-size) / 2);
+            content: '';
+            position: absolute;
+            width: var(--marker-size);
+            height: var(--marker-size);
+            left: var(--marker-pos-h);
+            top: 0;
+            bottom: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            background-color: var(--c-contrast);
+        }
+        &::after {
+            margin-left: 100%;
+        }
+    }
+}

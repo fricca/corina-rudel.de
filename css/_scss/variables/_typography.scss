@@ -1,0 +1,30 @@
+:root {
+    /**
+     * Typographic scale
+     * Ratio is "major third": 5 / 4 = 1.25
+     * Base font sizes:
+     * - small screens: 16px
+     * - large screens: 18px
+     */
+    --font-size-ratio: 1.25;
+    --font-size-base: 1rem; /* Small screen */
+    --font-size-up-5: calc(var(--font-size-up-4) * var(--font-size-ratio));     /* 348.828125‬ / 54.931640625 */
+    --font-size-up-4: calc(var(--font-size-up-3) * var(--font-size-ratio));     /* 39.0625    / 43.9453125 */
+    --font-size-up-3: calc(var(--font-size-up-2) * var(--font-size-ratio));     /* 31.25      / 35.15625 */
+    --font-size-up-2: calc(var(--font-size-up-1) * var(--font-size-ratio));     /* 25px       / 28.125px */
+    --font-size-up-1: calc(var(--font-size-base) * var(--font-size-ratio));     /* 20px       / 22.5px */
+    /* font size base                                                              16px       / 18px */
+    --font-size-down-1: calc(var(--font-size-base) / var(--font-size-ratio));   /* 12.8       / 14.4 */
+    --font-size-down-2: calc(var(--font-size-down-1) / var(--font-size-ratio)); /* 10.24      / 11.52 */
+
+    /**
+     * Line heights
+     */
+    --line-height-base: 1.75;
+    --line-height-reduced: 1.2;
+}
+@media (min-width: 40rem) and (min-height: 28rem) {
+    :root {
+        --font-size-base: 1.125rem; /* Large screen */
+    }
+}

@@ -1,0 +1,22 @@
+/* Reading progress indicator (cust prop updated via JS) */
+.progress-indicator {
+    --reading-progress: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--unit-down-3-5);
+        background-color: var(--c-gray);
+    }
+    &::after {
+        transition: transform .1s linear;
+        transform: scaleX(var(--reading-progress));
+        transform-origin: 0 0;
+        background-color: var(--c-contrast);
+    }
+}

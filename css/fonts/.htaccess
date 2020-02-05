@@ -1,0 +1,22 @@
+<FilesMatch "\.(svg|ttf|ttc|otf|eot|woff|woff2)$">
+    # Add correct content-type for fonts
+    AddType application/vnd.ms-fontobject .eot
+    AddType application/x-font-ttf .ttf
+    AddType application/x-font-opentype .otf
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff .woff2
+    AddType image/svg+xml .svg
+
+    <IfModule mod_expires.c>
+        ExpiresActive on
+        ExpiresByType application/vnd.ms-fontobject A29030400
+        ExpiresByType application/x-font-ttf A29030400
+        ExpiresByType application/x-font-opentype A29030400
+        ExpiresByType application/x-font-woff A29030400
+        ExpiresByType image/svg+xml A29030400
+    </IfModule>
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+        Header set Cache-Control "max-age=29030400, public"
+    </IfModule>
+</FilesMatch>

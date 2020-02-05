@@ -1,0 +1,172 @@
+/**
+ * ++++++++++++++++++++++++++++++++
+ * ELEMENTS
+ * ++++++++++++++++++++++++++++++++
+ */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    --line-height: var(--line-height-base); /* Set it as variable -> can be used for other properties */
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: normal;
+    line-height: var(--line-height);
+    background-color: #fff;
+    color: var(--c-text);
+    border-top: var(--unit-down-3-5) solid #fff;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+a[href] {
+    color: var(--c-contrast);
+    text-decoration: underline;
+    text-decoration-color: rgba($c-contrast, .4);
+    text-decoration-thickness: .15em;
+    text-underline-offset: .15em;
+}
+a[href]:visited,
+a[href]:hover {
+    color: var(--c-text);
+    text-decoration-color: rgba($c-text, .3);
+}
+a[href]:active,
+a[href]:focus {
+    color: var(--c-text-dark);
+}
+
+small {
+    font-size: var(--font-size-down-2);
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 400;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+}
+/* Firefox */
+button::-moz-focus-inner {
+    border: none;
+}
+/* Set back focus indicator */
+button:focus {
+    outline: 1px solid var(--c-contrast);
+    box-shadow: 0 0 4px var(--c-contrast);
+}
+/* Display focus style only when keyboard activated for supporting browsers
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+ */
+button:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+button:focus-visible {
+    outline: 1px solid var(--c-contrast);
+    box-shadow: 0 0 4px var(--c-contrast);
+}
+/* Firefox */
+button:-moz-focusring {
+    outline: 1px solid var(--c-contrast);
+    box-shadow: 0 0 4px var(--c-contrast);
+}
+
+b,
+strong {
+    font-weight: bold;
+    color: var(--c-text-dark);
+}
+i,
+em {
+    font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    --line-height: var(--line-height-reduced);
+    font-family: var(--font-display);
+    font-weight: bold;
+    line-height: var(--line-height);
+    color: var(--c-text-dark);
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: var(--font-size-up-4);
+    color: var(--c-contrast);
+    margin: var(--unit-base) 0;
+    padding: 0;
+}
+h2 {
+    font-size: var(--font-size-up-2);
+    color: var(--c-contrast);
+    margin: var(--unit-base) 0;
+    padding: 0;
+}
+h3 {
+    font-size: var(--font-size-up-1);
+    margin: var(--unit-down-1) 0;
+    padding: 0;
+}
+h4 {
+    font-size: var(--font-size-base);
+    margin: var(--unit-down-2) 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 0 var(--unit-down-2) 0;
+}
+
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+}
+ul,
+ol {
+    margin: 0 0 var(--unit-down-2) 0;
+    padding: 0 0 0 1.5em;
+}
+ul {
+    list-style: square outside;
+}
+ol {
+    list-style: decimal outside;
+}
+li::marker {
+    color: var(--c-contrast);
+}
+ol > li::marker {
+    font-weight: bold;
+}
+
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}

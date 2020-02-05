@@ -1,0 +1,24 @@
+.resume {
+    border-top: 1px solid lighten($c-gray, 5%);
+    border-bottom: 1px solid lighten($c-gray, 5%);
+
+    &__section:not(:last-child) {
+        margin-bottom: var(--unit-base);
+        padding-bottom: var(--unit-base);
+    }
+    &__title {
+        background-image: linear-gradient(to right, lighten($c-gray, 10%) 40%, var(--c-gray));
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+        padding-bottom: var(--unit-down-3);
+    }
+    &__time {
+        font-style: italic;
+        color: var(--c-text-light);
+        margin-bottom: calc(var(--row-gap) * -1);
+    }
+    &__activity:last-child > :last-child {
+        margin-bottom: 0;
+    }
+}

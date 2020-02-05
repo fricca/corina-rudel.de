@@ -1,0 +1,20 @@
+.footer {
+
+    &__section {
+        --footer-spacing: var(--unit-base);
+        padding-top: var(--footer-spacing);
+        padding-bottom: var(--footer-spacing);
+    }
+    &__section--minor {
+        --footer-spacing: var(--unit-down-2);
+    }
+    &__section + &__section {
+        border-top: 1px solid var(--c-gray-dark);
+    }
+    &__inner {
+        text-align: center;
+    }
+    & p {
+        margin-bottom: 0;
+    }
+}

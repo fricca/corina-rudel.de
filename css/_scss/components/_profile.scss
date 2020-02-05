@@ -1,0 +1,54 @@
+/* User profile */
+.profile {
+    padding-bottom: var(--unit-base);
+
+    &__inner {
+        text-align: center;
+
+        &:first-child {
+            padding-top: var(--unit-base);
+        }
+    }
+    &__pic {
+        display: inline-block;
+        border-radius: 100%;
+        border: 1px solid var(--c-gray);
+    }
+    &__pic-wrap {
+        position: relative; /* Containing block */
+        display: inline-block;
+        vertical-align: bottom;
+        border-radius: 100%;
+        border: 4px solid transparent;
+        width: calc(100% + var(--col-gap) / 2);
+        max-width: calc(var(--col) * 2 + var(--col-gap) * 1.5);
+
+        &::before {
+            /* Aspect ratio placeholder beside img - not yet in all browsers by width/height attributes */
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+            float: left;
+            width:1px;
+            margin-left: -1px;
+        }
+
+        img {
+            border-radius: 100%;
+            display: block;
+            width: var(--width, 320px);
+        }
+    }
+    &__title {
+        font-size: var(--font-size-up-5);
+        margin: var(--unit-down-2) 0;
+    }
+    &__subtitle {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &__location {
+        color: var(--c-text-light);
+    }
+}

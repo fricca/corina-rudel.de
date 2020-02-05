@@ -1,0 +1,33 @@
+.icon-action {
+    --color: var(--c-text-light);
+    color: var(--color);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    /* Enlarge click area */
+    padding-top: 1rem;
+    margin-top: -1rem;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+        --color: var(--c-contrast);
+        color: var(--color);
+    }
+    &__icon {
+        --icon-spacing: .35em;
+        --icon-size: 1.25em;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin-right: var(--icon-spacing);
+        opacity: .8;
+        stroke: var(--color);
+        fill: var(--color);
+    }
+    &__icon--right {
+        margin-right: 0;
+        margin-left: var(--icon-spacing);
+    }
+}

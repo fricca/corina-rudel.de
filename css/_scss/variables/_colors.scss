@@ -1,0 +1,27 @@
+$c-contrast: rgb(199, 21, 26);
+
+$c-gray-darker: rgb(78, 72, 66);
+$c-gray-dark: rgb(122, 118, 114);
+$c-gray: rgb(210, 206, 202);
+$c-gray-light: rgb(238, 237, 235);
+$c-gray-lighter: rgb(246, 245, 244);
+
+$c-text: rgb(68, 64, 62);
+$c-text-light: rgb(153, 151, 149);
+$c-text-dark: rgb(51, 47, 45);
+$c-text-inverse: rgb(222, 222, 222);
+
+:root {
+    --c-contrast: #{$c-contrast};
+
+    --c-gray-darker: #{$c-gray-darker};
+    --c-gray-dark: #{$c-gray-dark};
+    --c-gray: #{$c-gray};
+    --c-gray-light: #{$c-gray-light};
+    --c-gray-lighter: #{$c-gray-lighter};
+
+    --c-text: #{$c-text};
+    --c-text-light: #{$c-text-light};
+    --c-text-dark: #{$c-text-dark};
+    --c-text-inverse: #{$c-text-inverse};
+}
