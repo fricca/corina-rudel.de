@@ -10,7 +10,8 @@ module.exports = function(grunt) {
         paths: {
             css_in: 'css/_scss/',
             css_out: 'css/',
-            js: 'js/src/',
+            js: 'js/',
+            js_src: '<%= paths.js %>/src/',
 
             eleventy_src: 'src/',
             eleventy_files: 'files/',
@@ -40,9 +41,14 @@ module.exports = function(grunt) {
         },
         copy: {
             css: {
-              expand: true,
-              src: '<%= paths.css_out %>/**/*',
-              dest: 'dist/',
+                expand: true,
+                src: '<%= paths.css_out %>/**/*',
+                dest: 'dist/',
+            },
+            js: {
+                expand: true,
+                src: '<%= paths.js %>/**/*',
+                dest: 'dist/',
             },
         },
         webpack: {
@@ -73,13 +79,15 @@ module.exports = function(grunt) {
             },
             webpack: {
                 files: [
-                    '<%= paths.js %>**/*.js',
+                    '<%= paths.js_src %>**/*.js',
                 ],
                 tasks: [
-                    'webpack'
+                    'webpack',
+                    'copy:js',
                 ],
                 options: {
                     spawn: false,
+                    livereload: true,
                 }
             },
             eleventy: {
@@ -90,8 +98,6 @@ module.exports = function(grunt) {
                     '<%= paths.eleventy_src %>**/*.md',
 
                     '<%= paths.eleventy_files %>**/*',
-                    // '<%= paths.eleventy_css %>**/*',
-                    '<%= paths.eleventy_js %>**/*'
                 ],
                 tasks: [
                     'eleventy'
@@ -106,6 +112,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('eleventy', ['shell:eleventy']);
 
-    grunt.registerTask('default', ['newer:sass', 'newer:cssmin', 'newer:copy', /* 'newer:webpack', */ 'newer:shell:eleventy', 'watch']);
-    grunt.registerTask('build', [/* 'webpack', */ 'sass', 'cssmin', 'copy', 'eleventy']);
+    grunt.registerTask('default', ['newer:sass', 'newer:cssmin', 'newer:copy', 'newer:webpack', 'newer:shell:eleventy', 'watch']);
+    grunt.registerTask('build', ['webpack', 'sass', 'cssmin', 'copy', 'eleventy']);
 };
