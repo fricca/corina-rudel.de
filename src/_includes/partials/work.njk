@@ -1,0 +1,19 @@
+{% extends 'partials/article.njk' %}
+
+{% set article_title = pageTitle %}
+{% set article_intro = '' %}
+{% set article_sections = [] %}
+{% for work in collections.work | sorted %}
+    {% if not work.data.locale or work.data.locale === locale %}
+        {% if work.data.type === 'intro' %}
+            {% set article_intro = work.templateContent %}
+        {% else %}
+            {% set section = {
+                title: work.data.title,
+                content: work.templateContent,
+                media: work.data.mediaId
+            } %}
+            {% set article_section = (article_sections.push(section)) %}
+        {% endif %}
+    {% endif %}
+{% endfor %}

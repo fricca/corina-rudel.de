@@ -1,0 +1,15 @@
+<div class="header__main-nav main-nav" aria-labelledby="header-main-nav">
+    <h2 class="a11y-hidden" id="header-main-nav">{{ 'main_nav' | trans(locale, translations) }}</h2>
+    <ul class="main-nav__list list-inline list-inline--centered">
+        {% for section in collections.section | sorted %}
+            {% if section.data.locale === locale %}
+                {% set isCurrent = (page.url === section.url) %}
+                <li class="main-nav__item list-inline__item{% if isCurrent %} is-current{% endif %}">
+                    <a class="main-nav__action" {% if isCurrent %} aria-current="page"{% else %} href="{{ section.url }}"{% endif %}>
+                        {{- section.data.navTitle -}}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

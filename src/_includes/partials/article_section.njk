@@ -1,0 +1,19 @@
+{% set section_title = article_section.title %}
+{% set section_content = article_section.content %}
+{% set section_media = media[article_section.media] if article_section.media else '' %}
+
+<section class="article_section">
+    <div class="article__main l-holder l-holder--readable">
+        <h2 class="article__title">{{ section_title }}</h2>
+        <div class="article__text">
+            {{ section_content | safe }}
+        </div>
+    </div>
+    {% if section_media | length %}
+        <div class="l-holder">
+            <div class="article__media">
+                {% include 'partials/media.njk' %}
+            </div>
+        </div>
+    {% endif %}
+</section>

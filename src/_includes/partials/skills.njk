@@ -1,0 +1,35 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+    <article class="article">
+        <div class="l-holder l-holder--readable p-hor-base p-vert-base p-hor-safe-area">
+            <header class="article__header">
+                <h1>{{ pageTitle }}</h1>
+                {% if skills.intro.content[locale] %}
+                    {{ skills.intro.content[locale] | safe }}
+                {% endif %}
+            </header>
+        </div>
+        <div class="b-light bo-light-top p-vert-base p-hor-base p-hor-safe-area">
+            <ul class="cards l-holder grid-main">
+                {% for index, skill in skills.items %}
+                    <li class="cards__item">
+                        <span class="cards__picture">
+                            <svg class="cards__icon" aria-hidden="true" focusable="false"><use xlink:href="#icon-{{ skill.id }}"></use></svg>
+                        </span>
+                        <h3 class="cards__title">{{ skill.name | trans(locale, translations) }}</h3>
+                        <div class="cards__content">
+                            <ul class="list-inline list-inline--marker list-inline--centered t-small">
+                                {% for item in skill.items %}
+                                    <li class="list-inline__item list-inline__item--marker">
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </article>
+{% endblock %}

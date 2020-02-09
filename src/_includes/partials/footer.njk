@@ -1,0 +1,36 @@
+<footer class="footer c-inverse p-vert-bot-safe-area">
+    <div class="footer__section">
+        <div class="footer__inner l-holder p-hor-base p-hor-safe-area">
+            <p>
+                {{ data.person.name }}
+                &ndash;
+                {{ data.person.title[locale] }}
+            </p>
+            {% include 'partials/contact.njk' %}
+        </div>
+    </div>
+    <div class="footer__section footer__section--minor t-small">
+        <div class="footer__inner l-holder p-hor-base p-hor-safe-area">
+            <p class="t-small" lang="en">
+                Handmade with the help of
+                {% set comma = joiner() %}
+                {% for name, url in data.credit_urls -%}
+                    {{- comma() }}
+                    <a href="{{ url }}">{{ name }}</a>
+                {%- endfor %}
+                ❤️
+            </p>
+            <ul class="legal list-inline list-inline--marker list-inline--centered">
+                {% for item in collections.legal %}
+                    {% if item.data.locale === locale %}
+                        <li class="legal__item list-inline__item list-inline__item--marker">
+                            <a {% if page.url === item.url %} aria-current="page"{% else %}href="{{ item.url }}"{% endif %}>
+                                {{ item.data.pageTitle }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</footer>

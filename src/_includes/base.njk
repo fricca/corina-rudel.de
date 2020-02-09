@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ metaTitle }}</title>
+        <meta name="description" content="{{ metaDescription }}">
+        <link rel="stylesheet" href="/css/style.min.css">
+    </head>
+    <body>
+        <div class="page progress-indicator" style="--reading-progress: 1;">
+            <header class="header b-light p-hor-safe-area">
+                {% block header %}
+                    {% include 'partials/header.njk' %}
+                {% endblock %}
+            </header>
+
+            <main class="content">
+                {% block content %}
+                    <div class="l-holder l-holder--readable p-vert-base p-bot-large p-hor-base">
+                        <article class="article">
+                            {{ content | safe }}
+                        </article>
+                    </div>
+                {% endblock %}
+            </main>
+
+            {% include "partials/footer.njk" %}
+        </div>
+        {% include "partials/icons.html" %}
+
+        <script>
+            !(function(d) {
+                if (!! d.documentElement.classList) {
+                    const root = d.documentElement;
+
+                    root.classList.remove('no-js');
+                    root.classList.add('js');
+                }
+            }(document));
+        </script>
+        <script src="/js/bundle.js"></script>
+    </body>
+</html>

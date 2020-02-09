@@ -1,0 +1,32 @@
+{% macro video(data, locale, translations) %}
+    {% set type = data.type %}
+    {% set dir = data.dir %}
+    {% set files = data.files %}
+    {% set width = data.size[0] %}
+    {% set height = data.size[1] %}
+
+    <div
+        class="figure__media figure__media--{{ type }}"
+        {% if width and height %} style="--width: {{ width }}; --height: {{ height }};{% endif %}">
+
+        {% set poster = '' %}
+        {% if data.poster | length %}
+            {% set poster = ' poster="' + '/' + data.poster.dir + '/' + data.poster.file + '"' %}
+        {% endif %}
+
+        <video controls preload="metadata"{{ poster | safe }}>
+            {% for file in files %}
+                {% set url = '/' + dir + '/' + file.file %}
+                {% set type = file.type %}
+                <source src="{{ url }}" type="{{ type }}">
+            {% endfor %}
+        </video>
+
+        <button class="figure__play">
+            <svg class="figure__play-icon" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-play"></use>
+            </svg>
+            <span class="a11y-hidden">{{ 'play_video' | trans(locale, translations) }}</span>
+        </button>
+    </div>
+{% endmacro %}

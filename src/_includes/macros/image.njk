@@ -1,0 +1,35 @@
+{% macro image(data, locale, translations) %}
+    {% set type = data.type %}
+    {% set dir = data.dir %}
+    {% set files = data.files %}
+    {% set resp_sizes = data.resp_sizes %}
+    {% set width = data.size[0] %}
+    {% set height = data.size[1] %}
+
+    {% set alt = data.alt[locale] %}
+    {% set lazy = data.lazy %}
+
+    {% set path = '/' + dir + '/' %}
+    {% set mainUrl = path + files[0].file %}
+    <div
+        class="figure__media figure__media--{{ type }}"
+        {% if width and height %} style="--width: {{ width }}; --height: {{ height }};{% endif %}">
+
+        <img
+            class="figure__image"
+            {% if lazy %}loading="lazy"{% endif %}
+            {% if width %}width="{{ width }}"{% endif %}
+            {% if height %}height="{{ height }}"{% endif %}
+            {% if files | length > 1 -%}
+                {%- set comma = joiner() -%}
+                srcset="{%- for file in files -%}
+                        {{- comma() -}} {{- path }}{{ file.file }} {{ file.width }}w
+                {%- endfor -%}"
+            {%- endif -%}
+            {%- if resp_sizes %}
+                sizes="{{ resp_sizes }}"
+            {% endif -%}
+            src="{{ mainUrl }}"
+            alt="{{ alt }}">
+    </div>
+{% endmacro %}

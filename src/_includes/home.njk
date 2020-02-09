@@ -1,0 +1,34 @@
+{% extends "base.njk" %}
+
+{% block header %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="profile">
+        <div class="profile__inner l-holder p-hor-base">
+            <span class="profile__pic">
+                <span class="profile__pic-wrap">
+                    <img src="{{ data.person.img.url }}" width="320" height="320" style="--width: 320px;" alt="{{ data.person.img.alt[locale] }}">
+                </span>
+            </span>
+            <h1 class="profile__title">
+                {{ data.person.name }}
+            </h1>
+            <p class="profile__subtitle">
+                {{ data.person.title[locale] }}
+            </p>
+            <p class="profile__location">
+                {{ data.person.location[locale] }}
+            </p>
+            <div class="profile__contact">
+                {% include 'partials/contact.njk' %}
+            </div>
+        </div>
+    </div>
+    <div class="b-light bo-light-top p-vert-base p-hor-safe-area">
+        <article class="l-holder l-holder--readable p-vert-base p-hor-base">
+            {{ content | safe }}
+        </article>
+    </div>
+{% endblock %}

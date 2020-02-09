@@ -1,0 +1,11 @@
+{% for key, item in data.legal_notice %}
+    {{ item[locale] or item }}<br>
+{% endfor %}
+
+{% for contact in data.person.contact %}
+    {{ contact.type | trans(locale, translations) }}:
+    {% set url = contact.protocol + contact.url %}
+    <a href="{{ url }}">
+        {{ contact.text }}
+    </a><br>
+{% endfor %}

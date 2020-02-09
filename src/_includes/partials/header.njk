@@ -1,0 +1,19 @@
+<nav class="header__nav">
+    {% for home in collections.home %}
+        {% if home.data.locale === locale %}
+            <p class="header__home">
+                <a
+                    class="header__home-action p-hor-base"
+                    href="{{ home.url }}"
+                    {%- if page.url === section.url %} aria-current="page"{% endif %}>
+                    {{ home.data.navTitle }}
+                </a>
+            </p>
+        {% endif %}
+    {% endfor %}
+    {% include 'partials/main-nav.njk' %}
+
+    {% if locale and data.locales | length > 1 %}
+        {% include 'partials/lang-switch.njk' %}
+    {% endif %}
+</nav>

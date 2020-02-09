@@ -1,0 +1,11 @@
+<ul class="list-inline list-inline--centered t-small">
+    {% for contact in data.person.contact %}
+        <li class="list-inline__item">
+            {% set url = contact.protocol + contact.url %}
+            <a class="icon-action" href="{{ url }}">
+                <svg class="icon-action__icon" aria-hidden="true" focusable="false" width="18" height="18"><use xlink:href="#icon-{{ contact.type }}"/></svg>
+                {{ contact.text }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,9 @@
+{% include 'partials/contact_legal.njk' %}
+
+{% for section in collections.privacy %}
+    {% if not section.data.localisation or section.data.locale === locale %}
+        <div lang="{{ section.data.locale }}">
+            {{ section.templateContent | safe }}
+        </div>
+    {% endif %}
+{% endfor %}

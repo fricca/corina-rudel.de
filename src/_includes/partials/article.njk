@@ -1,0 +1,25 @@
+{% extends 'base.njk' %}
+
+{% block content %}
+    <article id="latest-work" class="article p-vert-base p-bot-large p-hor-base p-hor-safe-area">
+        {% block intro %}
+            <header class="article__header l-holder l-holder--readable">
+                <h1>{{ article_title }}</h1>
+                {% if article_intro %}
+                    <div class="article__teaser">
+                        {{ article_intro | safe }}
+                    </div>
+                {% endif %}
+            </header>
+        {% endblock %}
+        {% block article_content %}
+            <div class="article__content">
+                {% if article_sections.length %}
+                    {% for article_section in article_sections %}
+                        {% include 'partials/article_section.njk' %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endblock %}
+    </article>
+{% endblock %}

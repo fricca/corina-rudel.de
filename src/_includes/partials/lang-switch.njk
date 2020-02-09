@@ -1,0 +1,24 @@
+<div class="header_lang-switch lang-switch" aria-labelledby="header-lang-switch">
+    <h2 class="a11y-hidden" id="header-lang-switch">{{ 'lang_switch' | trans(locale, translations) }}</h2>
+    <ul class="lang-switch__list list-inline">
+
+        {% for loc in data.locales %}
+            {% set isCurrent = (locale === loc.short) %}
+            <li class="lang-switch__item list-inline__item{% if isCurrent %} is-current{% endif %}">
+                {% set locUrl = ("/" if loc.default else ("/" + loc.short + "/")) %}
+
+                {# Get url from collection #}
+                {% for section in collections.all %}
+                    {% if section.data.locale === loc.short and section.data.pageKey === pageKey %}
+                        {% set locUrl = section.url %}
+                    {% endif %}
+                {% endfor %}
+                <a {% if isCurrent %}aria-current="page"{% else %} href="{{ locUrl }}" {% endif %}class="lang-switch__action">
+                    <span lang="{{ loc.short }}" aria-label="{{ loc.text }}">
+                        {{ loc.short }}
+                    </span>
+                </a>
+            </li>
+        {% endfor%}
+    </ul>
+</div>

@@ -1,0 +1,59 @@
+{% if section_media | length %}
+    {% import 'macros/carousel.njk' as carou %}
+
+    {# Capture images for use in carousel #}
+    {% set figures %}
+        {% for media in section_media %}
+            {% set type = media.type %}
+
+            {% set caption = media.caption %}
+            {% set source = caption.source %}
+
+            {% set figure %}
+                <figure class="figure grid-col-full">
+                    {% import ('macros/' + type + '.njk') as mediaItem %}
+                    {{ mediaItem[type](media, locale, translations) }}
+
+                    {% if caption or source %}
+                        <figcaption class="figure__caption">
+                            {% if caption | length %}
+                                {% set caption_text = caption.text[locale] or caption.text %}
+                                {{ caption_text | safe }}
+                            {% endif %}
+                            {% if source | length %}
+                                {% set source_text = source.text[locale]  or source.text %}
+                                {% set source_label = (source.label | trans(locale, translations)) or source.label %}
+                                {% set source_url = source.url %}
+
+                                <span class="figure__source">
+                                    {% if source_label %}{{ source_label }}:{% endif %}
+                                    {% if source_url %}
+                                        <a href="{{ source_url }}" rel="noreferrer">
+                                    {% endif %}
+                                        {{ source_text }}
+                                    {% if source_url %}
+                                        </a>
+                                    {% endif %}
+                                </span>
+                            {% endif %}
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endset %}
+
+            {% if (section_media | length) > 1 %}
+                {# Output carousel #}
+                {{ carou.carousel_item(figure) }}
+            {% else %}
+                {{ figure | safe }}
+            {% endif %}
+        {% endfor %}
+    {% endset %}
+
+    {% if (section_media | length) > 1 %}
+        {# Output carousel #}
+        {{ carou.carousel(figures) }}
+    {% else %}
+        {{ figures | safe }}
+    {% endif %}
+{% endif %}
