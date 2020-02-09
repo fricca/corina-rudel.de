@@ -5,7 +5,7 @@ module.exports = function(eleventyConfig) {
 
     // Copy files to dist
     eleventyConfig
-        .addPassthroughCopy("css")
+        // .addPassthroughCopy("css")
         .addPassthroughCopy("js")
         .addPassthroughCopy("files")
         .addPassthroughCopy(".htaccess")
@@ -34,13 +34,27 @@ module.exports = function(eleventyConfig) {
                 return locales[locale][string];
             }
 
-            return '';
+            return string;
         }
     );
 
-    // Custom sorting for page section by front matter field "sort"
-    eleventyConfig.addCollection("pageSections", function(collection) {
-        return collection.getFilteredByTag("section").sort((a, b) => {
+    // Markdown filter
+    // https://edjohnsonwilliams.co.uk/2019/05/04/replicating-jekyll-s-markdownify-filter-in-nunjucks-with-eleventy/
+    const md = require('markdown-it')({
+        html: true
+    });
+
+    eleventyConfig.addNunjucksFilter(
+        'markdown',
+        function(string) {
+            return md.render(string);
+        }
+    );
+
+    // Custom sorting by front matter field "sort"
+    // collection.myCollection | sorted
+    eleventyConfig.addFilter('sorted', function(collection) {
+        return collection.sort((a, b) => {
             const sortA = parseInt(a.data.sort, 10);
             const sortB = parseInt(b.data.sort, 10);
 

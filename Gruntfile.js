@@ -38,6 +38,13 @@ module.exports = function(grunt) {
                 dest: '<%= paths.css_out %>style.min.css'
             }
         },
+        copy: {
+            css: {
+              expand: true,
+              src: '<%= paths.css_out %>/**/*',
+              dest: 'dist/',
+            },
+        },
         webpack: {
             myConfig: webpackConfig,
         },
@@ -55,23 +62,14 @@ module.exports = function(grunt) {
                     '<%= paths.css_in %>**/*.scss'
                 ],
                 tasks: [
-                    'sass'
+                    'sass',
+                    'cssmin',
+                    'copy:css',
                 ],
                 options: {
                     spawn: false,
+                    livereload: true,
                 }
-            },
-            css: {
-                files: [
-                    '<%= paths.css_out %>**/*.css',
-                    '!<%= paths.css_out %>**/*.min.css'
-                ],
-                tasks: [
-                    'cssmin'
-                ],
-                options: {
-                    spawn: false,
-                },
             },
             webpack: {
                 files: [
@@ -92,7 +90,7 @@ module.exports = function(grunt) {
                     '<%= paths.eleventy_src %>**/*.md',
 
                     '<%= paths.eleventy_files %>**/*',
-                    '<%= paths.eleventy_css %>**/*',
+                    // '<%= paths.eleventy_css %>**/*',
                     '<%= paths.eleventy_js %>**/*'
                 ],
                 tasks: [
@@ -108,6 +106,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('eleventy', ['shell:eleventy']);
 
-    grunt.registerTask('default', ['newer:sass', 'newer:cssmin', 'newer:webpack', 'watch']);
-    grunt.registerTask('build', ['webpack', 'sass', 'cssmin', 'eleventy']);
+    grunt.registerTask('default', ['newer:sass', 'newer:cssmin', 'newer:copy', /* 'newer:webpack', */ 'newer:shell:eleventy', 'watch']);
+    grunt.registerTask('build', [/* 'webpack', */ 'sass', 'cssmin', 'copy', 'eleventy']);
 };
