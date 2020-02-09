@@ -1,10 +1,7 @@
 .carousel {
     --items-per-page: 1;
     --max-width: 1;
-    background-color: var(--c-gray-lighter);
     margin-bottom: var(--unit-down-2);
-    margin-left: calc(var(--space-default) * -1);
-    margin-right: calc(var(--space-default) * -1);
 
     @media (min-width: 48rem) {
         & {

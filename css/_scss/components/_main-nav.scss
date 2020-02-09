@@ -1,0 +1,93 @@
+.main-nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+
+    margin-top: var(--unit-down-3);
+    border-top: 1px solid var(--c-gray);
+    padding-top: var(--unit-down-3);
+    padding-left: var(--space-default);
+    padding-right: var(--space-default);
+
+    @media (min-width: $br-header-nav-small) {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: var(--space-default);
+        margin-right: var(--space-default);
+    }
+    @media (min-width: $br-header-nav) {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &__list {
+        --item-distance: 0;
+
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+
+        @media (min-width: $br-header-nav-small) {
+            justify-content: space-around;
+        }
+
+        @media (min-width: $br-header-nav) {
+            --item-distance: var(--unit-base);
+            width: auto;
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        &:first-child::before,
+        &::after {
+            display: none;
+        }
+    }
+    &__action {
+        --border-color: var(--c-gray);
+
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            right: -2px;
+            bottom: 0;
+            height: 100%;
+            border-bottom: calc(var(--border-height) * 2) solid var(--border-color);
+            transform: translateY(calc(var(--line-height-adjust) + var(--unit-down-3) + var(--border-height)));
+            opacity: 0;
+            transition: .4s opacity;
+        }
+    
+        &[href],
+        &[href]:visited {
+            color: var(--c-text-light);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--c-text);
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &[aria-current] {
+            color: var(--c-text);
+
+            &::before {
+                --border-color: var(--c-contrast);
+                opacity: 1;
+            }
+        }
+    }
+}

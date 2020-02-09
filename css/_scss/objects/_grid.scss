@@ -31,7 +31,7 @@
 /* Main column in horizontal center with "readable" width */
 .grid-main--readable {
     --col-nums: 8;
-    grid-template-columns: minmax(0, 1fr) minmax(0, calc(var(--col) * var(--col-nums) + var(--col-gap) * (var(--col-nums) - 1))) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, $grid-width) minmax(0, 1fr);
     grid-column-gap: 0;
 }
 .grid-main--readable > * {

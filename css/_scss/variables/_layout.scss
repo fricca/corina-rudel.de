@@ -1,4 +1,5 @@
 :root {
+
     /**
      * Grid & Layout
      */
@@ -7,3 +8,12 @@
     --col-gap: var(--unit-base);
     --row-gap: 0;
 }
+
+// Calculate (max-)width for grid and other containers
+// use as SASS variable o/w is precalculated
+// can be modified by changing --col
+// * wide: -col: 12
+//   e.g. for media elements and cards
+// * narrow: --col: 8
+//   readable line length for text
+$grid-width: calc(var(--col) * var(--col-nums) + var(--col-gap) * (var(--col-nums) - 1));

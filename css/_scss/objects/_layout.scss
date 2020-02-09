@@ -1,0 +1,17 @@
+.l-holder {
+    --col-nums: 12;
+    max-width: $grid-width;
+
+    // Stretch width for short content, o/w would shrink to fit content
+    // when in flex container because of auto margins
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &--readable {
+        --col-nums: 8;
+    }
+}

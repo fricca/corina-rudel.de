@@ -7,11 +7,23 @@ html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     scroll-behavior: smooth;
 }
 
 html {
     -webkit-text-size-adjust: 100%;
+    overflow-y: scroll; // Ghost scroll bar for windows - avoid jump on navigation between long and short pages
+
+    @media (min-width: 40rem) and (min-height: 32rem) {
+        font-size: 1.125rem; /* Larger screen */
+    }
+    @media (min-width: 120rem) and (min-height: 36rem) {
+        font-size: 1.1875rem; /* Larger screen */
+    }
+    @media (min-width: 140rem) and (min-height: 42rem) {
+        font-size: 1.25rem; /* Larger screen */
+    }
 }
 
 body {
@@ -23,6 +35,7 @@ body {
     background-color: #fff;
     color: var(--c-text);
     border-top: var(--unit-down-3-5) solid #fff;
+    box-sizing: border-box;
 }
 
 img {
