@@ -1,5 +1,5 @@
 ---
-title: Bildergalerie
+title: Überarbeitung einer Bildergalerie
 mediaId: work_gallery
 tags: work
 locale: de

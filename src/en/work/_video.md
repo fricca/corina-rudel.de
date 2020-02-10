@@ -1,5 +1,5 @@
 ---
-title: Video Platform
+title: Development of a Video Platform
 mediaId: work_video
 tags: work
 locale: en

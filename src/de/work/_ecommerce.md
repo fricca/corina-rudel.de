@@ -1,5 +1,5 @@
 ---
-title: E-Commerce
+title: E-Commerce - Responsive Online-Shops
 mediaId: work_ecommerce
 tags: work
 locale: de

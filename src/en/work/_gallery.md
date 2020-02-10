@@ -1,5 +1,5 @@
 ---
-title: Image Gallery
+title: Relaunch of an Image Gallery
 mediaId: work_gallery
 tags: work
 locale: en

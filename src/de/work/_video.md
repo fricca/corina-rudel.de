@@ -1,5 +1,5 @@
 ---
-title: Video-Plattform
+title: Neuentwicklung einer Video-Plattform
 mediaId: work_video
 tags: work
 locale: de
