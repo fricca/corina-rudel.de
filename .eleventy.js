@@ -1,4 +1,5 @@
 const moment = require("moment");
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 
 module.exports = function(eleventyConfig) {
     const defaultLocale = 'de';
@@ -65,6 +66,13 @@ module.exports = function(eleventyConfig) {
             }
         });
     });
+
+    // Add MD5 strings to assets (css, js)
+    // https://github.com/mightyplow/eleventy-plugin-cache-buster
+    const cacheBusterOptions = {
+        outputDirectory: 'dist'
+    };
+    eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
 
     return {
         dir: {
