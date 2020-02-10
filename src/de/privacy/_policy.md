@@ -43,7 +43,7 @@ Empfänger der Daten sind ggf. technische Dienstleister, die für den Betrieb un
 
 ### Speicherdauer
 
-Die Daten werden gelöscht, sobald diese für den Zweck der Erhebung nicht mehr erforderlich sind. Dies ist für die Daten, die der Bereitstellung der Webseite dienen, grundsätzlich der Fall, wenn die jeweilige Sitzung beendet ist.
+Die Daten werden von unserem Provider in den sog. Logfiles gespeichert, dabei werden die letzten beiden Stellen der IP-Adresse gekürzt (z.B.: aus 11.22.33.44 wird 11.22.0.0). Die Logfiles werden nach spätestens 30 Tagen automatisch gelöscht.
 
 ### Bereitstellung vorgeschrieben oder erforderlich
 
