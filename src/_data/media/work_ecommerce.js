@@ -13,7 +13,7 @@ module.exports = function() {
                     file: 'fitmart-product-page_800.jpg'
                 },
             ],
-            resp_sizes: '(max-width: 1280px) 90vw, 1280px',
+            resp_sizes: '(max-width: 1280px) 100vw, 1280px',
             size: [1600, 1000],
             lazy: true,
             alt: {

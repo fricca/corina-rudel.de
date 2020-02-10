@@ -13,7 +13,7 @@ module.exports = function() {
                     file: 'team-andro-styleguide_800.jpg'
                 },
             ],
-            resp_sizes: '(max-width: 1280px) 90vw, 1280px',
+            resp_sizes: '(max-width: 1280px) 100vw, 1280px',
             size: [1600, 1000],
             lazy: true,
             alt: {
@@ -30,12 +30,6 @@ module.exports = function() {
                     `,
                 },
                 source: {
-                    label: 'screenshot_source',
-                    text: {
-                        de: 'Team-Andro-Styleguide',
-                        en: 'Team Andro Styleguide',
-                    },
-                    url: 'https://www.team-andro.com/static/_styleguide/text.html',
                 }
             }
         },
