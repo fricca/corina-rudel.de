@@ -9,7 +9,7 @@ navTitle: Über mich
 pageTitle: Über mich
 
 metaTitle: Über mich - Corina Rudel
-metaDescription: 
+metaDescription: Meine Berufserfahrung, Lehre und Veröffentlichungen zur Web- und Frontend-Entwicklung.
 ---
 # Über mich
 

@@ -6,7 +6,7 @@ slug: ''
 pageKey: home
 navTitle: Corina Rudel
 
-metaTitle: Corina Rudel - Web Developer with a Focus on the Front-End and a passion for User Experience
+metaTitle: Corina Rudel - Web Developer with a Focus on the Front-End and a Passion for User Experience
 metaDescription: Résumé and latest projects of Corina Rudel, a front-end web developer based in Munich, Germany
 ---
 Hi, I'm Corina, a web developer in Munich, Germany, with a focus on the front-end and a passion for user experience. Since the late '90s, I have been working on web projects, sometimes on the full stack (conception, design, development), sometimes as an expert in a team.

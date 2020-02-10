@@ -8,8 +8,8 @@ slug: about
 navTitle: About Me
 pageTitle: About Me
 
-metaTitle: CV Including My Professional Experience in Web Development - Corina Rudel
-metaDescription: 
+metaTitle: About Me - Corina Rudel
+metaDescription: My professional experience, teaching and publications concerning web and front-end development.
 ---
 # {{ pageTitle }}
 
