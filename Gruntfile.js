@@ -71,6 +71,7 @@ module.exports = function(grunt) {
                     'sass',
                     'cssmin',
                     'copy:css',
+                    'shell:eleventy',
                 ],
                 options: {
                     spawn: false,
