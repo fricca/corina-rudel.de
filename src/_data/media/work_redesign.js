@@ -13,7 +13,7 @@ module.exports = function() {
                     file: 'team-andro-styleguide_800.jpg'
                 },
             ],
-            resp_sizes: '(max-width: 1024px) 90vw, 1024px',
+            resp_sizes: '(max-width: 1280px) 90vw, 1280px',
             size: [1600, 1000],
             lazy: true,
             alt: {
