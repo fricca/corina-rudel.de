@@ -23,7 +23,7 @@ Ich habe etwa 20 Jahre Erfahrung in der Webentwicklung. Seit Ende der 90er begei
 
 Seit September 2003 arbeite ich freiberuflich in München. Als **Webentwicklerin mit Fokus auf dem Frontend** habe ich viele Internetauftritte umgesetzt, z. T. als Fullservice-Projekte (Konzept, Design, Umsetzung), z. T. als Teil eines Teams, u. a. für High View (planet-tv.de & waidwerk.tv bis 2016) und Nickl PR (nickl-pr.de bis 2018).
 
-Seit 2009 bin ich mit der **Webentwicklung bei [Team-Andro.com](https://www.team-andro.com/)** betraut, der größten Online-Community für Fitness und Bodybuilding in Deutschland. Ein detaillierter Überblick über meine Tätigkeit befindet sich unter [„Projekte“](/work/).
+Seit 2009 bin ich mit der **Webentwicklung bei [Team-Andro.com](https://www.team-andro.com/)** betraut, der größten Online-Community für Fitness und Bodybuilding in Deutschland. Ein detaillierter Überblick über meine Tätigkeit befindet sich unter [„Projekte“](/projekte/).
 
 Bis 2016 habe ich auch **Architektur-Projekte** bearbeitet: Planung, 3D-Visualisierung und Umsetzung im Bereich Architektur, Messebau und Events, u. a. für BMW, Osram, HypoVereinsbank, Rolls Royce und Starbucks.
 
@@ -39,9 +39,9 @@ Ich gebe mein Wissen sehr gern an andere weiter. Abgesehen vom beständigen Coac
 
 ## Berufsausbildung & Studium
 
-Als für mich die Berufswahl anstand gab des das Web noch gar nicht so richtig. Meiner Liebe zur Sprache folgend habe ich ein Studium der **Germanistik & Geschichte** begonnen. Doch mir fehlte die Kreativität und die Möglichkeit, etwas zu erschaffen. Daher habe ich nach einer vorbereitenden Schreinerausbildung ein **Innenarchitektur-Studium** an der Hoschschule Rosenheim absolviert und als Diplom-Ingenieurin (FH) abgeschlossen.
+Als für mich die Berufswahl anstand gab es das Web noch gar nicht so richtig. Meiner Liebe zur Sprache folgend habe ich ein Studium der **Germanistik & Geschichte** begonnen. Doch mir fehlte die Kreativität und die Möglichkeit, etwas zu erschaffen. Daher habe ich nach einer vorbereitenden Schreinerausbildung ein **Innenarchitektur-Studium** an der Hochschule Rosenheim absolviert und als Diplom-Ingenieurin (FH) abgeschlossen.
 
-Seit Ende der 90er Jahre habe ich mich ständig mit der **Webentwicklung** befasst und mir die aktuellen Techniken autodidaktisch angeeignet&nbsp;&ndash; schließlich wurde ich zur CSS-Expertin. Vieles, was ich im Studium erlernt habe, hat sich dafür als sehr hilfreich erwiesen: Getsaltungsprinzipien, Vorgehen in Iterationen, Selbstmotivation, Selbstorganisation, Arbeit sowohl eigenständig als auch im Team, gegenseitiges Feedback e.&#8239;t.&#8239;c.
+Seit Ende der 90er Jahre habe ich mich ständig mit der **Webentwicklung** befasst und mir die aktuellen Techniken autodidaktisch angeeignet&nbsp;&ndash; schließlich wurde ich zur CSS-Expertin. Vieles, was ich im Studium erlernt habe, hat sich dafür als sehr hilfreich erwiesen: Gestaltungsprinzipien, Vorgehen in Iterationen, Selbstmotivation, Selbstorganisation, Arbeit sowohl eigenständig als auch im Team, gegenseitiges Feedback e.&#8239;t.&#8239;c.
 
 ## Und sonst?
 

@@ -23,7 +23,7 @@ module.exports = function() {
             caption: {
                 text: {
                     de: `
-                        Auf der Startseite der Video-Plattform befinden sich ausgewählte Videos in einem Carousel, und Listen von neuen und hervorgehobenen Videos werden in einem Raster angezeigt.
+                        Auf der Startseite der Video-Plattform befinden sich ausgewählte Videos in einem „Carousel“, und Listen von neuen und hervorgehobenen Videos werden in einem Raster angezeigt.
                     `,
                     en: `
                         The home page of the video platform shows some hand-selected videos in a carousel and lists of new and featured videos in a grid.

@@ -18,7 +18,7 @@ module.exports = function() {
             lazy: true,
             alt: {
                 de: 'Screenshot: Fitmart-Shop - Produktseite',
-                en: 'Screenshot: FItmart shop - product page',
+                en: 'Screenshot: Fitmart shop - product page',
             },
             caption: {
                 text: {

@@ -3,7 +3,7 @@ module.exports = {
     content: {
         de: `
             <p>
-                Ich lege viel Wert auf eine sorgfältige, gewissenhafte und vorausschauende Arbeitsweise &ndash; und versuche dabei immer auch über den Tellerand hinaus zu schauen. Folgende Eigenschaften haben meine Auftraggeber immer geschätzt:
+                Ich lege viel Wert auf eine sorgfältige, gewissenhafte und vorausschauende Arbeitsweise &ndash; und versuche dabei immer auch über den Tellerrand hinaus zu schauen. Folgende Eigenschaften haben meine Auftraggeber immer geschätzt:
             </p>
             <ul>
                 <li>
@@ -19,7 +19,7 @@ module.exports = {
                     Ich finde <strong>Dokumentation</strong> wichtig, sowohl in Form von <strong>Kommentaren im Code</strong> als auch in begleitenden Dokumenten.
                 </li>
                 <li>
-                    Ich kann <strong>komplexe Sachverhalte</strong> so aufbereiten, dass ich sie auch anderen vermittlen kann.
+                    Ich kann <strong>komplexe Sachverhalte</strong> so aufbereiten, dass ich sie auch anderen vermitteln kann.
                 </li>
                 <li>
                     Ich arbeite gerne im Team und schätze <strong>respektvolles gegenseitiges Feedback,</strong> z.&#8239;B. in Code-Reviews. 
@@ -29,7 +29,7 @@ module.exports = {
                 </li>
             </ul>
             <p>
-                Im folgenden eine Liste der <strong>fachlichen Fähigkeiten,</strong> die ich im professionellen Umfeld erworben und angewendet habe und in denen ich mich sicher fühle. Es gibt viele weitere, in die ich mich in Form von Testcases oder Tutorials eingearbeitet habe, jedoch noch nicht umfassend anwenden konnte, z.&#8239;B. ember.js, React.js, ES6+, Node.js, diverse PWA-Features u.&#8239;v.&#8239;m. 
+                Im Folgenden eine Liste der <strong>fachlichen Fähigkeiten,</strong> die ich im professionellen Umfeld erworben und angewendet habe und in denen ich mich sicher fühle. Es gibt viele weitere, in die ich mich in Form von Testcases oder Tutorials eingearbeitet habe, jedoch noch nicht umfassend anwenden konnte, z.&#8239;B. ember.js, React.js, ES6+, Node.js, diverse PWA-Features u.&#8239;v.&#8239;m. 
             </p>
         `,
         en: `
