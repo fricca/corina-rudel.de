@@ -1,9 +1,7 @@
 .article {
-    // h2 {
-    //     // No collapsing margins
-    //     display: inline-block;
-    //     width: 100%;
-    // }
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     &__teaser {
         font-style: italic;
