@@ -1,6 +1,6 @@
 # Personal Web Site of Corina Rudel
 
-Frontend web developer in Munich, Germany
+Frontend web developer in Munich, Germany  
 Live: [corina-rudel.de](https://www.corina-rudel.de)
 
 Built with
