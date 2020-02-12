@@ -21,7 +21,7 @@
                 ❤️
             </p>
             <ul class="legal list-inline list-inline--marker list-inline--centered">
-                {% for item in collections.legal %}
+                {% for item in collections.legal | sorted %}
                     {% if item.data.locale === locale %}
                         <li class="legal__item list-inline__item list-inline__item--marker">
                             <a {% if page.url === item.url %} aria-current="page"{% else %}href="{{ item.url }}"{% endif %}>
