@@ -1,14 +1,14 @@
 module.exports = {
     locales: [
         {
-            short: 'en',
-            text: 'English',
-            default: false
-        },
-        {
             short: 'de',
             text: 'Deutsch',
             default: true
+        },
+        {
+            short: 'en',
+            text: 'English',
+            default: false
         },
     ],
 
