@@ -66,6 +66,9 @@
     font-size: var(--font-size-down-2);
     font-weight: normal;
 }
+.t-lh-reduced {
+    --line-height: var(--line-height-reduced);
+}
 
 /* Animation */
 .a-pulse {

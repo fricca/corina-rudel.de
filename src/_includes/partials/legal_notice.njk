@@ -2,7 +2,7 @@
 
 {% for section in collections.legal_notice %}
     {% if not section.data.localisation or section.data.locale === locale %}
-        <div lang="{{ section.data.locale }}">
+        <div class="p-vert-base" lang="{{ section.data.locale }}">
             {{ section.templateContent | safe }}
         </div>
     {% endif %}
