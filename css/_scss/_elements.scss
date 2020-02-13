@@ -9,6 +9,10 @@ body {
     padding: 0;
     height: 100%;
     scroll-behavior: smooth;
+
+    @media print {
+        height: auto; // o/w FF cuts of content
+    }
 }
 
 html {
@@ -59,6 +63,19 @@ a[href]:hover {
 a[href]:active,
 a[href]:focus {
     color: var(--c-text-dark);
+}
+@media print {
+    a[href] {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a[href^="http"]::after {
+        content: " [" attr(href) "]";
+        font-size: var(--font-size-down-1);
+        font-style: italic;
+        font-weight: normal;
+    }
 }
 
 small {

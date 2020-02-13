@@ -11,9 +11,13 @@
             </p>
         {% endif %}
     {% endfor %}
-    {% include 'partials/main-nav.njk' %}
+    <div class="header__main-nav print-hidden">
+        {% include 'partials/main-nav.njk' %}
+    </div>
 
     {% if locale and data.locales | length > 1 %}
-        {% include 'partials/lang-switch.njk' %}
+        <div class="header__lang-switch print-hidden">
+            {% include 'partials/lang-switch.njk' %}
+        </div>
     {% endif %}
 </nav>

@@ -3,4 +3,8 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: minmax(0, 1fr); // Avoid overflow; alternative: min-width: 0 on child
+
+    @media print {
+        display: block; // o/w FF cuts of content
+    }
 }

@@ -31,7 +31,7 @@ grunt
 ```
 
 ## @TODO
-* Add print styles
+* ~~Add print styles~~ ✓
 * Add custom error page(s)
 * Add manifest with icons
 * Add service worker for offline handling

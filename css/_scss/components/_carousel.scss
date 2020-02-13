@@ -21,6 +21,12 @@
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch; /* Momentum scrolling for iOS < 13 */
         scroll-snap-type: x mandatory;
+
+        @media print {
+            overflow: visible;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
     /* Show part of next item to indicate overflow */
     &__container.is-overflown {
@@ -41,5 +47,9 @@
         flex: 0 0 var(--width);
         scroll-snap-align: start;
         padding-left: var(--unit-down-2);
+
+        @media print {
+            --width: 50%;
+        }
     }
 }

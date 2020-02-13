@@ -3,7 +3,6 @@ $br-header-nav: 52rem;
 
 .header {
     --border-height: 1px;
-    border-bottom: var(--border-height) solid var(--c-gray-light);
     position: relative;
     z-index: 1;
 
@@ -12,6 +11,36 @@ $br-header-nav: 52rem;
         top: var(--unit-down-3-5);
     }
 
+    &__home {
+        margin: 0;
+        line-height: calc(var(--line-height) * 1em); // lh to em -> child can inherit value, not factor to keep it consistent
+        grid-area: logo;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $br-header-nav) {
+            &::after {
+                content: '';
+                border-top: 1px solid var(--c-gray);
+                flex: 1;
+            }
+        }
+
+        &-action[href],
+        &-action[href]:visited {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: var(--font-size-up-1);
+            line-height: inherit;
+            letter-spacing: .05em;
+            color: var(--c-contrast);
+        }
+    }
+    &__main-nav {
+        grid-area: nav;
+    }
     &__nav {
         max-width: $grid-width;
         margin-left: auto;
@@ -39,36 +68,20 @@ $br-header-nav: 52rem;
             }
         }
 
+        @media print {
+            & {
+                grid-template-areas: 'nav';
+                grid-template-columns: min-content;
+                justify-content: center;
+            }
+        }
+
         &::before {
             content: '';
             grid-area: space;
         }
     }
-    &__home {
-        margin: 0;
-        line-height: calc(var(--line-height) * 1em); // lh to em -> child can inherit value, not factor to keep it consistent
-        grid-area: logo;
-        display: flex;
-        align-items: center;
-
-        @media (min-width: $br-header-nav) {
-            &::after {
-                content: '';
-                border-top: 1px solid var(--c-gray);
-                flex: 1;
-            }
-        }
-
-        &-action[href],
-        &-action[href]:visited {
-            display: inline-block;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: var(--font-size-up-1);
-            line-height: inherit;
-            letter-spacing: .05em;
-            color: var(--c-contrast);
-        }
+    &__lang-switch {
+        grid-area: lang;
     }
 }

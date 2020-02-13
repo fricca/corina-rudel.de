@@ -1,4 +1,6 @@
 .figure {
+    page-break-inside: avoid;
+    break-inside: avoid;
 
     &__media {
         --placeholder: calc(var(--height) / var(--width) * 100%);
@@ -89,6 +91,10 @@
             0 0 10px rgba(0, 0, 0, .5);
 
         transition: opacity .5s .1s;
+
+        @media print {
+            display: none!important;
+        }
 
         &:focus {
             outline: none;

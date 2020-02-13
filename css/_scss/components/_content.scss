@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
 
+    @media print {
+        display: block; // o/w FF cuts of content
+    }
+
     & > :not(:first-child) {
         flex-grow: 1;
     }

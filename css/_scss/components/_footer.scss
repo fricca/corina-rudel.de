@@ -2,6 +2,9 @@
 
     &__section {
         --footer-spacing: var(--unit-base);
+        --border-color: var(--c-gray-darker);
+
+        border-top: 1px solid var(--border-color);
         padding-top: var(--footer-spacing);
         padding-bottom: var(--footer-spacing);
     }
@@ -9,7 +12,7 @@
         --footer-spacing: var(--unit-down-2);
     }
     &__section + &__section {
-        border-top: 1px solid var(--c-gray-dark);
+        --border-color: var(--c-gray-dark);
     }
     &__inner {
         text-align: center;
