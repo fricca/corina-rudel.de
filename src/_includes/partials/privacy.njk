@@ -1,9 +1,11 @@
-{% include 'partials/contact_legal.njk' %}
+{% set policyIntro %}
+    {% include 'partials/contact_legal.njk' %}
+{% endset %}
 
 {% for section in collections.privacy %}
-    {% if not section.data.localisation or section.data.locale === locale %}
+    {% if section.data.localisation === false or section.data.locale === locale %}
         <div lang="{{ section.data.locale }}">
-            {{ section.templateContent | safe }}
+            {{ section.templateContent | safe | replace('[[PRIVACY_CONTROLLER]]', policyIntro) }}
         </div>
     {% endif %}
 {% endfor %}
