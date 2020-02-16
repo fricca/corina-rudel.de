@@ -7,6 +7,7 @@ $br-header-nav: 52rem;
     z-index: 1;
 
     @media (min-width: $br-header-nav) {
+        position: -webkit-sticky;
         position: sticky;
         top: var(--unit-down-3-5);
     }
