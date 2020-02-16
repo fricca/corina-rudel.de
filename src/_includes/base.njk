@@ -5,6 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>{{ metaTitle }}</title>
         <meta name="description" content="{{ metaDescription }}">
+        {# Preload base fonts - w/ JS for now to avoid cache buster #}
+        <script>
+            if (Object.entries && Array.prototype.forEach) {
+                const preloads = [
+                    {
+                        rel: 'preload',
+                        as: 'font',
+                        type: 'font/woff2',
+                        href: '/css/fonts/fira-sans-v10-latin-regular.woff2',
+                        crossorigin: 'anonymous'
+                    },
+                    {
+                        rel: 'preload',
+                        as: 'font',
+                        type: 'font/woff2',
+                        href: '/css/fonts/fira-sans-v10-latin-700.woff2',
+                        crossorigin: 'anonymous'
+                    }
+                ];
+                const head = document.head;
+
+                preloads.forEach((data) => {
+                    const link = document.createElement('link');
+                    Object.entries(data).forEach(([attr, value]) => {
+                        link.setAttribute(attr, value);
+                    });
+                    head.append(link);
+                });
+            }
+        </script>
         <link rel="stylesheet" href="/css/style.min.css">
     </head>
     <body>
