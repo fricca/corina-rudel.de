@@ -26,7 +26,7 @@ module.exports = function() {
                         Für die Kommunikationberaterin Katja Kirste habe ich eine Portfolio-Website auf Basis von Drupal umgesetzt. Layout und Typografie sind in Zusammenarbeit entstanden. 
                     `,
                     en: `
-                        For Katja Kirste, an communications advisor, I build an online portfolio based on Drupal. Layout and typography were developed in cooperation.
+                        For Katja Kirste, an communications advisor, I have built an online portfolio based on Drupal. Layout and typography were developed in cooperation.
                     `,
                 },
                 source: {
