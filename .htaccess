@@ -46,6 +46,7 @@ Redirect 301 /3d-visualisierung /ueber-mich/
     AddOutputFilterByType DEFLATE text/css
     AddOutputFilterByType DEFLATE image/svg+xml
     AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE image/vnd.microsoft.icon
     AddOutputFilterByType DEFLATE x-font/woff
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/x-javascript
