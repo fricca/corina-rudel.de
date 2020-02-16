@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig
         .addPassthroughCopy("files")
         .addPassthroughCopy(".htaccess")
+        .addPassthroughCopy("robots.txt")
         .addPassthroughCopy("favicon.ico");
 
     // Date filter (localized)
