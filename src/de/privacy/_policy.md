@@ -12,7 +12,8 @@ Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere üb
 ## Informationen über uns als Verantwortliche
 
 Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:
-[[PRIVACY_CONTROLLER]]
+
+<div>[[PRIVACY_CONTROLLER]]</div>
 
 ## Rechte der Nutzer und Betroffenen
 

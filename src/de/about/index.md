@@ -13,7 +13,7 @@ metaDescription: Meine Berufserfahrung, Lehre und Veröffentlichungen zur Web- u
 ---
 # Über mich
 
-<div class="article__teaser" markdown="1">
+<div class="article__teaser">
 
 Ich habe etwa 20 Jahre Erfahrung in der Webentwicklung. Seit Ende der 90er begeistere ich mich fürs WWW und habe alle Stadien mitgemacht: von Frames, <i lang="en">„Killer Web Sites“</i> mit verschachtelten Tabellen, über Webstandards mit semantischem HTML&nbsp;&amp; CSS, hin zum hochdynamischen heutigen Web mit <i lang="en">Progressive Web Apps</i> und <i lang="en">Single Page Applications</i>. Die ständige technische Weiterentwicklung, die Kreativität, die Chance, etwas zu erschaffen, ständig dazulernen zu dürfen und das Wissen unkompliziert weitergeben zu können &nbsp;&ndash; das sind die Gründe, weshalb ich die Arbeit fürs Web so liebe.
 

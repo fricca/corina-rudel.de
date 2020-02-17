@@ -12,7 +12,8 @@ The following privacy policy is intended to inform you in particular about the t
 ## Information about us as controllers of your data
 
 The party responsible for this website (the "controller") for purposes of data protection law is:
-[[PRIVACY_CONTROLLER]]
+
+<div>[[PRIVACY_CONTROLLER]]</div>
 
 ## The rights of users and data subjects
 With regard to the data processing to be described in more detail below, users and data subjects have the right

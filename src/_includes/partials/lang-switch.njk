@@ -13,8 +13,8 @@
                         {% set locUrl = section.url %}
                     {% endif %}
                 {% endfor %}
-                <a {% if isCurrent %}aria-current="page"{% else %} href="{{ locUrl }}" {% endif %}class="lang-switch__action">
-                    <span lang="{{ loc.short }}" aria-label="{{ loc.text }}">
+                <a {% if isCurrent %}aria-current="page"{% else %} href="{{ locUrl }}"{% endif %} class="lang-switch__action" aria-label="{{ loc.text }}">
+                    <span lang="{{ loc.short }}">
                         {{ loc.short }}
                     </span>
                 </a>
