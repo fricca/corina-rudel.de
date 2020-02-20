@@ -69,6 +69,10 @@
         --dimension: calc(var(--unit-base) * 2);
         --focus-border: 2px solid #fff;
 
+        .no-js & {
+            display: none;
+        }
+
         width: var(--dimension);
         height: var(--dimension);
         box-sizing: border-box;
@@ -93,7 +97,7 @@
         transition: opacity .5s .1s;
 
         @media print {
-            display: none!important;
+            display: none !important;
         }
 
         &:focus {
