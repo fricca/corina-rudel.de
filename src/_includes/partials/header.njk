@@ -2,10 +2,7 @@
     {% for home in collections.home %}
         {% if home.data.locale === locale %}
             <p class="header__home">
-                <a
-                    class="header__home-action p-hor-base"
-                    href="{{ home.url }}"
-                    {%- if page.url === section.url %} aria-current="page"{% endif %}>
+                <a class="header__home-action p-hor-base" href="{{ home.url }}" {%- if page.url === home.url %} aria-current="page" {% endif %}>
                     {{ home.data.navTitle }}
                 </a>
             </p>
