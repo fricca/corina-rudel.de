@@ -1,24 +1,65 @@
-module.exports = function() {
+module.exports = function () {
     return [
         {
-            type: 'image',
-            dir: 'files/images',
+            type: "image",
+            dir: "files/images",
             files: [
                 {
                     width: 1600,
-                    file: 'katja-kirste-profile.jpg'
+                    file: "steuerkanzlei-knipping-schwabing.jpg",
                 },
                 {
                     width: 800,
-                    file: 'katja-kirste-profile_800.jpg'
+                    file: "steuerkanzlei-knipping-schwabing_800.jpg",
                 },
             ],
-            resp_sizes: '(max-width: 1280px) 100vw, 1280px',
+            resp_sizes: "(max-width: 1280px) 100vw, 1280px",
             size: [1600, 1000],
             lazy: true,
             alt: {
-                de: 'Screenshot: Responsive Online-Portfolio von Katja Kirste',
-                en: 'Screenshot: Responsive online portfolio of Katja Kirste',
+                de:
+                    "Screenshot: Minimalistischer Online-Auftritt für Steuerberater Knipping",
+                en:
+                    "Screenshot: Minimalistic web site for tax consultant Knipping",
+            },
+            caption: {
+                text: {
+                    de: `
+                        Für die Steuerkanzlei Paul H.P. Knipping in München habe ich basierend auf einem bestehenden Logo und Briefpapier einen responsiven Online-Auftritt umgesetzt.
+                    `,
+                    en: `
+                        For the tax consulting agency Paul H.P. Knipping in Munich, I developed a small responsive web site based on the existing logo design and letterhead.
+                    `,
+                },
+                source: {
+                    label: "screenshot_source",
+                    text: {
+                        de: "steuerkanzlei-knipping.de",
+                        en: "steuerkanzlei-knipping.de",
+                    },
+                    url: "https://www.steuerkanzlei-knipping.de",
+                },
+            },
+        },
+        {
+            type: "image",
+            dir: "files/images",
+            files: [
+                {
+                    width: 1600,
+                    file: "katja-kirste-profile.jpg",
+                },
+                {
+                    width: 800,
+                    file: "katja-kirste-profile_800.jpg",
+                },
+            ],
+            resp_sizes: "(max-width: 1280px) 100vw, 1280px",
+            size: [1600, 1000],
+            lazy: true,
+            alt: {
+                de: "Screenshot: Responsive Online-Portfolio von Katja Kirste",
+                en: "Screenshot: Responsive online portfolio of Katja Kirste",
             },
             caption: {
                 text: {
@@ -30,34 +71,34 @@ module.exports = function() {
                     `,
                 },
                 source: {
-                    label: 'screenshot_source',
+                    label: "screenshot_source",
                     text: {
-                        de: 'katjakirste.de',
-                        en: 'katjakirste.de',
+                        de: "katjakirste.de",
+                        en: "katjakirste.de",
                     },
-                    url: 'https://katjakirste.de/',
-                }
-            }
+                    url: "https://katjakirste.de/",
+                },
+            },
         },
         {
-            type: 'image',
-            dir: 'files/images',
+            type: "image",
+            dir: "files/images",
             files: [
                 {
                     width: 1600,
-                    file: 'moewo.jpg'
+                    file: "moewo.jpg",
                 },
                 {
                     width: 800,
-                    file: 'moewo_800.jpg'
+                    file: "moewo_800.jpg",
                 },
             ],
-            resp_sizes: '(max-width: 1280px) 100vw, 1280px',
+            resp_sizes: "(max-width: 1280px) 100vw, 1280px",
             size: [1600, 1000],
             lazy: true,
             alt: {
-                de: 'Screenshot: Responsive Website für moewo.de',
-                en: 'Screenshot: Respnsive web site for moewo.de',
+                de: "Screenshot: Responsive Website für moewo.de",
+                en: "Screenshot: Respnsive web site for moewo.de",
             },
             caption: {
                 text: {
@@ -69,53 +110,14 @@ module.exports = function() {
                     `,
                 },
                 source: {
-                    label: 'screenshot_source',
+                    label: "screenshot_source",
                     text: {
-                        de: 'moewo.de',
-                        en: 'moewo.de',
+                        de: "moewo.de",
+                        en: "moewo.de",
                     },
-                    url: 'https://moewo.de/',
-                }
-            }
-        },
-        {
-            type: 'image',
-            dir: 'files/images',
-            files: [
-                {
-                    width: 1600,
-                    file: 'steuerkanzlei-knipping.jpg'
+                    url: "https://moewo.de/",
                 },
-                {
-                    width: 800,
-                    file: 'steuerkanzlei-knipping_800.jpg'
-                },
-            ],
-            resp_sizes: '(max-width: 1280px) 100vw, 1280px',
-            size: [1600, 1000],
-            lazy: true,
-            alt: {
-                de: 'Screenshot: Minimalistischer Online-Auftritt für Steuerberater Knipping',
-                en: 'Screenshot: Minimalistic web site for tax consultant Knipping',
             },
-            caption: {
-                text: {
-                    de: `
-                        Für die Steuerkanzlei Knipping/Lamberts-Hengster in München habe ich basierend auf einem bestehenden, sehr minimalistischen Visitenkartenentwurf einen Online-Auftritt umgesetzt. Die Website habe ich nachträglich responsiv angepasst. 
-                    `,
-                    en: `
-                        For the tax consulting agency Knipping/Lamberts-Hengster in Munich, I developed a small web site based on a minimalistic business card design. I “responsified” the web site after it was online for some years.
-                    `,
-                },
-                source: {
-                    label: 'screenshot_source',
-                    text: {
-                        de: 'steuerkanzlei-knipping-lamberts.de',
-                        en: 'steuerkanzlei-knipping-lamberts.de',
-                    },
-                    url: 'http://www.steuerkanzlei-knipping-lamberts.de/',
-                }
-            }
         },
     ];
 };
